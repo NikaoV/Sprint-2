@@ -144,7 +144,7 @@ p {
 .start-button:hover {
   background-color:darkcyan;
 }
-.start-button .icon:hover {
+.start-button:hover .icon {
     animation: move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -166,7 +166,7 @@ p {
 .contact:hover {
   background-color:rgba(0, 139, 139, 0.049);
 }
-.contact .icon:hover {
+.contact:hover .icon {
     animation: move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -305,6 +305,7 @@ p {
   }
   .phone {
     height: 600px;
+    margin-left: 60px;
 
   }
   .body {
@@ -334,7 +335,7 @@ p {
     width: 55%;
 }
 .hero .right {
-  width: 45;
+  width: 25;
 }
 
 }
