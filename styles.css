@@ -209,14 +209,13 @@ p {
 
 .partners-grid img {
   width: 100%;
-  height: auto;
 }
 
 .unified-platform {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color:#f7f9fc;;
+  background-color:white;
   padding: 64px 0;
 }
 
@@ -348,9 +347,8 @@ img{
 
   .navegation {
    
-    padding: 16px 16px;
-    padding-left: 27px;
-    padding-right: 0;
+    padding: 16px 30px;
+    
     margin-bottom: 65px;
   }
 
@@ -364,6 +362,7 @@ img{
     text-decoration: underline;
   }
   .menu a {
+     font-family: "Roboto", sans-serif;
     color: white;
     margin: 16px;
     font-weight: bold;
@@ -451,7 +450,9 @@ img{
   }
 
   .navegation {
-  padding-left: 80px;
+  
+  padding-right: 80px;
+  padding-left: 100px;
   }
   .partners-grid img {
     width: 78%;
