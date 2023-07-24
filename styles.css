@@ -143,10 +143,9 @@ p {
   margin: 16px 0;
 }
 
-.start-button:hover {
-  background-color:darkcyan;
-}
-.start-button:hover .flecha {
+
+
+ .start-button:hover .flecha {
     animation: move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -162,7 +161,7 @@ p {
   border-radius: 20px;
   background-color: transparent;
   color: #7000ff;
-  padding: 8px;
+  padding: 12px;
 }
 .contact:hover {
   background-color:rgba(0, 139, 139, 0.049);
@@ -179,12 +178,8 @@ p {
   align-items: center;
 }
 
-.flecha > img {
-  transition: transform 0.25s ease;
-}
 .phone {
   display: none;
-  /* height: 628px; */
 }
 
 .partners {
@@ -321,7 +316,7 @@ img{
   justify-content: center;
   position: relative;
   padding:calc(64px * 3) 0;
-  z-index: -1;
+  
 }
 .PseudoElements::before {
   content: "";
@@ -373,7 +368,6 @@ img{
   background-color:#00d4ff;
   color: #0a2540;
 }
-
 
 .PseudoElements .container-cards {
 display: flex;
@@ -429,17 +423,10 @@ margin: 22px 0;
 .column-graphics {
   display: none;
 }
-
-.PseudoElements::after {
-  content: "";
-  width: 100%;
-  height: 50%;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
+.start-button:hover {
+  background-color:whitedd;
 }
+
 
 @media (min-width: 550px) {
   .title {
@@ -669,7 +656,7 @@ margin: 22px 0;
     padding: 32px 0;
   }
   .PseudoElements::before {
-    height: 900px;
+    height: 950px;
   }
 }
 
