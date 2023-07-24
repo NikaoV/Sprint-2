@@ -396,6 +396,23 @@ margin: 22px 0;
 }
 
 
+.swipe-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: calc(64px *3) 0;
+}
+
+.card-container {
+  display: flex;
+  margin: 32px 0;
+}
+
+.swipe-section .card-text {
+  color: black;
+}
+
+
 @media (min-width: 550px) {
   .title {
     font-size: 30px;
@@ -587,6 +604,17 @@ margin: 22px 0;
       
     }
 
+    .swipe-section .card h3 {
+      font-size: 22px;
+    }
+    .swipe-section .card-container .card {
+      width: 25%;
+      padding-right:8px;
+      margin-right: 16px;
+      box-sizing: border-box;
+    }
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -672,5 +700,29 @@ margin: 22px 0;
   .PseudoElements::before {
     height: 950px;
   }
+
+  .swipe-section {
+    padding: 64px 0 16px 0;
+  }
+
+  .swipe-section .card-container .card .icon {
+    height: 35px;
+  }
 }
 
+@media only  screen and (max-width: 768px) {
+  /* 4ta seccion */
+ .swipe-section .card-container  {
+  flex-wrap: wrap;
+ }
+
+ .global-section .card-container {
+  flex-wrap: wrap;
+  margin: 64px 0;
+ }
+ .global-section .card-container .card {
+  width: 50%;
+  margin: 16px 0;
+ }
+
+}
