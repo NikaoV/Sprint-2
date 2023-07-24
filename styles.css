@@ -424,7 +424,11 @@ margin: 22px 0;
   display: none;
 }
 .start-button:hover {
-  background-color:whitedd;
+  background-color:darkcyan;
+}
+
+.column-text .start-button:hover {
+  background-color:white;
 }
 
 
