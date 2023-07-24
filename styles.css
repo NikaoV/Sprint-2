@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Inconsolata:wght@600&family=Roboto:ital,wght@1,100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Inconsolata:wght@600&family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -120,7 +120,7 @@ p {
   line-height: 26px;
   font-weight: 400;
   font-family: "Arial", sans-serif;
-  margin:26px 0;
+  margin: 12px 0;
   
 }
 
@@ -131,7 +131,7 @@ p {
 }
 
 .start-button {
-  font-family: "Pangolin", cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   letter-spacing: 1.25px;
   font-weight: bold;
@@ -139,20 +139,19 @@ p {
   border: none;
   background-color: darkorange;
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   margin: 16px 0;
+  margin-right: 20px;
 }
 
-.start-button:hover {
-  background-color:darkcyan;
-}
-.start-button:hover .icon {
+
+
+ .start-button:hover .flecha {
     animation: move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 .contact {
-  margin-left: 16px;
   display: flex;
   align-items: center;
   font-family: "Roboto", sans-serif;
@@ -163,29 +162,25 @@ p {
   border-radius: 20px;
   background-color: transparent;
   color: #7000ff;
-  padding: 8px;
+  padding: 11px;
 }
 .contact:hover {
   background-color:rgba(0, 139, 139, 0.049);
 }
-.contact:hover .icon {
+.contact:hover .flecha {
     animation: move;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-.icon {
+.flecha {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.icon > img {
-  transition: transform 0.25s ease;
-}
 .phone {
   display: none;
-  /* height: 628px; */
 }
 
 .partners {
@@ -209,13 +204,14 @@ p {
 
 .partners-grid img {
   width: 100%;
+  height: auto;
 }
 
 .unified-platform {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color:white;
+  background-color:#f7f9fc;;
   padding: 64px 0;
 }
 
@@ -232,6 +228,7 @@ h2 {
   font-weight: 600;
   font-size: 34px;
   margin: 0;
+  width: 100%;
 }
 .unified-platform  h2 {
   margin-bottom: 16px;
@@ -258,50 +255,15 @@ a:hover {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color:white;
+  
 }
 
-.grid-section {
-  display: grid;
-  grid-template-areas:
-  "card slack slack"
-  "phone slack slack"
-  "phone dash dash"
-  ;
-  grid-gap: 32px;
-  padding: 32px 0;
+.column {
+  width: 100%;
+  padding-top: 20px ;
+  padding-bottom: 40px;
 }
 
-#credit-card {
-grid-area: card;
-width: 100%;
-box-shadow: 0px 2px 40px 
-rgba(0, 0, 0, 0.361);
-border-radius:20px ;
-}
-img{
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-#slack-invoice {
-  grid-area: slack;
-  width: 100%;
-  box-shadow: 0px 2px 40px
-  rgba(0, 0, 0, 0.361);
-  border-radius:20px ;
-}
-#phone {
-  grid-area: phone;
-  width: 100%;
-}
-
-#dash {
-  grid-area: dash;
-  width: 100%;
-  box-shadow: 0px 2px 40px
-  rgba(0, 0, 0, 0.361);
-  border-radius:20px ;
-}
 .container-unified {
   width: 100%;
   max-width: 1144px;
@@ -309,6 +271,128 @@ img{
 .container-graphics {
   width: 100%;
   max-width: 1144px;
+}
+
+.PseudoElements {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding:calc(64px * 3) 0;
+  z-index: 1;
+}
+.PseudoElements::before {
+  content: "";
+  width: 100%;
+  height: 1100px;
+  background-color: #0a2540;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-10deg);
+}
+
+.section-container {
+  max-width: 1144px;
+}
+
+.twocolumn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.twocolumn .column-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.Designed-text {
+  color:#32e2f1;
+  font-family:"Anek Telugu", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.column-text .start-button {
+  margin: 12px 0;
+  font-weight:900;
+  border-radius: 20px;
+  background-color:#00d4ff;
+  color: #0a2540;
+}
+
+.PseudoElements .container-cards {
+display: flex;
+flex-direction: column;
+margin: 22px 0;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px 16px 8px 0;
+}
+
+
+.PseudoElements .container-cards .card {
+  width: 100%;
+}
+
+.card .icon {
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.card  .flecha {
+  height: 24px;
+}
+
+ .card h3 {
+  font-family:"Anek Telugu", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  width: 100% ;
+  
+}
+
+.card-text {
+  color: #adbdcc;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+}
+
+.PseudoElements .contact {
+  color: #00d4ff;
+  
+  font-size: 15px;
+
+}
+
+.column-graphics {
+  display: none;
+}
+.start-button:hover {
+  background-color:darkcyan;
+}
+
+.column-text .start-button:hover {
+  background-color:white;
 }
 
 
@@ -347,8 +431,9 @@ img{
 
   .navegation {
    
-    padding: 16px 30px;
     
+    padding: 16px 30px;
+  
     margin-bottom: 65px;
   }
 
@@ -362,7 +447,7 @@ img{
     text-decoration: underline;
   }
   .menu a {
-     font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: white;
     margin: 16px;
     font-weight: bold;
@@ -430,6 +515,78 @@ img{
     justify-content: center;
     box-sizing: border-box;
   }
+
+    .twocolumn .column-graphics {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-left: 16px;
+      box-sizing: border-box;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-areas:
+      "card slack slack"
+      "phone slack slack"
+      "phone dash dash"
+      ;
+      grid-gap: 32px;
+      padding: 32px 0;
+      
+    }
+    
+    #credit-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: 0px 2px 40px 
+    rgba(0, 0, 0, 0.361);
+    border-radius:20px ;
+    padding: 0;
+    }
+    
+    #slack-invoice {
+      grid-area: slack;
+      width: 100%;
+      box-shadow: 0px 2px 40px
+      rgba(0, 0, 0, 0.361);
+      border-radius:20px ;
+      padding: 0;
+    }
+    #phone {
+      grid-area: phone;
+      width: 100%;
+      padding: 0;
+    }
+    
+    #dash {
+      grid-area: dash;
+      width: 100%;
+      box-shadow: 0px 2px 40px
+      rgba(0, 0, 0, 0.361);
+      border-radius:20px ;
+      z-index: -1;
+      padding: 0;
+    }
+
+    .PseudoElements .container-cards {
+      flex-direction: row;
+    }
+
+    #codigo-mac {
+      max-width: 480px;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      
+    }
+    #terminal-code {
+      max-width: 480px;
+      border-radius: 20px;
+      
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -450,9 +607,8 @@ img{
   }
 
   .navegation {
-  
-  padding-right: 80px;
-  padding-left: 100px;
+    padding-right: 0px;
+    padding-left: 80px;  
   }
   .partners-grid img {
     width: 78%;
@@ -462,11 +618,23 @@ img{
     position: absolute;
     width: 100%;
     height: 460px;
-  }
+  }  
+  
 }
 
 
+@media (min-width:1025px) and (max-width: 1440px) {
+  .twocolumn .column-graphics {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+}
 
+@media only screen and (max-width:850px ){
+  .PseudoElements .column-graphics {
+    width: 40%;
+  }
+}
 
 @media (min-width: 550px) and (max-width: 1144px){
 .hero .left {
@@ -486,11 +654,23 @@ img{
     padding: 0 16px;
   }
 
-
+  .section-container {
+    padding: 0 16px;
+    overflow-x:hidden;
+  }
 }
+
 
 @media only  screen and (max-width: 550px) {
   .unified-platform {
     padding: 16px 0;
   }
+
+  .PseudoElements {
+    padding: 32px 0;
+  }
+  .PseudoElements::before {
+    height: 950px;
+  }
 }
+
