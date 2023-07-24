@@ -141,6 +141,7 @@ p {
   color: white;
   padding: 8px 16px;
   margin: 16px 0;
+  margin-right: 20px;
 }
 
 
@@ -161,7 +162,7 @@ p {
   border-radius: 20px;
   background-color: transparent;
   color: #7000ff;
-  padding: 12px;
+  padding: 11px;
 }
 .contact:hover {
   background-color:rgba(0, 139, 139, 0.049);
@@ -257,49 +258,12 @@ a:hover {
   
 }
 
-.grid-section {
-  display: grid;
-  grid-template-areas:
-  "card slack slack"
-  "phone slack slack"
-  "phone dash dash"
-  ;
-  grid-gap: 32px;
-  padding: 32px 0;
-  
+.column {
+  width: 100%;
+  padding-top: 20px ;
+  padding-bottom: 40px;
 }
 
-#credit-card {
-grid-area: card;
-width: 100%;
-box-shadow: 0px 2px 40px 
-rgba(0, 0, 0, 0.361);
-border-radius:20px ;
-}
-img{
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-#slack-invoice {
-  grid-area: slack;
-  width: 100%;
-  box-shadow: 0px 2px 40px
-  rgba(0, 0, 0, 0.361);
-  border-radius:20px ;
-}
-#phone {
-  grid-area: phone;
-  width: 100%;
-}
-
-#dash {
-  grid-area: dash;
-  width: 100%;
-  box-shadow: 0px 2px 40px
-  rgba(0, 0, 0, 0.361);
-  border-radius:20px ;
-  z-index: -1;
-}
 .container-unified {
   width: 100%;
   max-width: 1144px;
@@ -316,7 +280,7 @@ img{
   justify-content: center;
   position: relative;
   padding:calc(64px * 3) 0;
-  
+  z-index: 1;
 }
 .PseudoElements::before {
   content: "";
@@ -562,6 +526,51 @@ margin: 22px 0;
       box-sizing: border-box;
     }
 
+    .grid-section {
+      display: grid;
+      grid-template-areas:
+      "card slack slack"
+      "phone slack slack"
+      "phone dash dash"
+      ;
+      grid-gap: 32px;
+      padding: 32px 0;
+      
+    }
+    
+    #credit-card {
+    grid-area: card;
+    width: 100%;
+    box-shadow: 0px 2px 40px 
+    rgba(0, 0, 0, 0.361);
+    border-radius:20px ;
+    padding: 0;
+    }
+    
+    #slack-invoice {
+      grid-area: slack;
+      width: 100%;
+      box-shadow: 0px 2px 40px
+      rgba(0, 0, 0, 0.361);
+      border-radius:20px ;
+      padding: 0;
+    }
+    #phone {
+      grid-area: phone;
+      width: 100%;
+      padding: 0;
+    }
+    
+    #dash {
+      grid-area: dash;
+      width: 100%;
+      box-shadow: 0px 2px 40px
+      rgba(0, 0, 0, 0.361);
+      border-radius:20px ;
+      z-index: -1;
+      padding: 0;
+    }
+
     .PseudoElements .container-cards {
       flex-direction: row;
     }
@@ -610,6 +619,7 @@ margin: 22px 0;
     width: 100%;
     height: 460px;
   }  
+  
 }
 
 
