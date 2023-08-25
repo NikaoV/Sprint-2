@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+
+body {
+  position: relative;
+  overflow-x:hidden;
+}
+
 @keyframes move {
   from {
     transform: translateX(-5px);
@@ -120,7 +126,7 @@ p {
   line-height: 26px;
   font-weight: 400;
   font-family: "Arial", sans-serif;
-  margin: 12px 0;
+  margin: 16px 0;
   
 }
 
@@ -135,13 +141,12 @@ p {
   font-size: 16px;
   letter-spacing: 1.25px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   background-color: darkorange;
   color: white;
   padding: 8px 16px;
   margin: 16px 0;
-  margin-right: 20px;
 }
 
 
@@ -162,7 +167,7 @@ p {
   border-radius: 20px;
   background-color: transparent;
   color: #7000ff;
-  padding: 11px;
+  /* padding: 12px 12px 12px 0; */
 }
 .contact:hover {
   background-color:rgba(0, 139, 139, 0.049);
@@ -258,12 +263,49 @@ a:hover {
   
 }
 
-.column {
-  width: 100%;
-  padding-top: 20px ;
-  padding-bottom: 40px;
+.grid-section {
+  display: grid;
+  grid-template-areas:
+  "card slack slack"
+  "phone slack slack"
+  "phone dash dash"
+  ;
+  grid-gap: 32px;
+  padding: 32px 0;
+  
 }
 
+#credit-card {
+grid-area: card;
+width: 100%;
+box-shadow: 0px 2px 40px 
+rgba(0, 0, 0, 0.361);
+border-radius:20px ;
+}
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+#slack-invoice {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: 0px 2px 40px
+  rgba(0, 0, 0, 0.361);
+  border-radius:20px ;
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+}
+
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: 0px 2px 40px
+  rgba(0, 0, 0, 0.361);
+  border-radius:20px ;
+  z-index: -1;
+}
 .container-unified {
   width: 100%;
   max-width: 1144px;
@@ -280,7 +322,7 @@ a:hover {
   justify-content: center;
   position: relative;
   padding:calc(64px * 3) 0;
-  z-index: 1;
+  
 }
 .PseudoElements::before {
   content: "";
@@ -365,7 +407,7 @@ margin: 22px 0;
  .card h3 {
   font-family:"Anek Telugu", sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 16px;
   width: 100% ;
   
 }
@@ -395,6 +437,7 @@ margin: 22px 0;
   background-color:white;
 }
 
+/* 4ta seccion */
 
 .swipe-section {
   width: 100%;
@@ -412,7 +455,257 @@ margin: 22px 0;
   color: black;
 }
 
+/* 5ta Seccion */
 
+.global-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: relative;
+  padding-top:calc(64px *3);
+  overflow: hidden;
+}
+.global-section::before {
+content: "" ;
+width: 100%;
+height: 1000px;
+background-color: #0a2540;
+position: absolute;
+top: -32px;
+left: 0;
+transform: skewY(-10deg);
+z-index: -1;
+
+}
+
+
+
+#globe {
+  max-width: 844px;
+  opacity: 25%;
+  position: absolute;
+  top: 10%;
+  z-index: -1;
+}
+
+.global-section .card-container {
+  display: flex;
+  margin: calc(64px * 2) 0;
+}
+
+.global-section .card-container .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+.global-section .card-container .card h3 {
+border-left:  2px solid  aqua;
+padding-left: 8px;
+line-height: 28px;
+}
+.global-section a {
+  color: aqua;
+}
+.two-text {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.two-text .text-left {
+  width: 50%;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.two-text .text-right {
+  width: 50%;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+/* Sexta seccion */
+
+.virtual_section {
+  display: flex;
+  justify-content: center;
+  padding: calc(64px * 2) 0;
+  position: relative;
+}
+
+.virtual_section::before {
+  content: "";
+  background-color:white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+
+.virtual_section .text-left {
+ 
+  padding-right:64px ;
+}
+
+.swipe_sessions {
+  width: 540px;
+  height: 446px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.swipe_sessions .card_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.swipe_sessions .card_top::before {
+  content: "";
+  background: linear-gradient( 101.33deg, #08209a 0.76%, #6563ff 33.33%, #36c5f0 76.92%, #83e2ff 96.96% );
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: -40%;
+  transform: skewY(-5deg);
+  z-index: 1;
+}
+
+#sessions_logo {
+  z-index: 2;
+  width: 338px;
+}
+
+.virtual_section .avatars {
+  position: absolute;
+  bottom: -70px;
+  left: 64px;
+  z-index: 3;
+}
+
+.virtual_section .avatars img {
+  width: 80px;
+}
+.virtual_section .avatars img:nth-of-type(2) {
+  position: absolute;
+  left: 55px;
+}
+
+.virtual_section .card_bottom {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: 64px;
+}
+.virtual_section .card_bottom .unified-text {
+  margin-top:32px;
+}
+
+.virtual_section .card_bottom .card-text {
+  color: black;
+  font-weight: 700;
+  width: 50%;
+}
+
+.waiting_section {
+  display: flex;
+  justify-content: center;
+  padding: 58px 0;
+}
+
+.waiting_section .text-left {
+  padding: 0 64px 0 0;
+}
+
+.waiting_section .text-right {
+  flex-direction: row;
+}
+
+.waiting_section .text-right .card {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 8px 0 0;
+  margin: 0 16px 0 0;
+}
+
+.waiting_section .start-button {
+  margin-bottom: 34px;
+}
+
+.waiting_section h3 {
+  font-size: 20px;
+}
+.waiting_section .card-text {
+  color: #0a2540;
+}
+
+
+/* footer */
+
+footer {
+  font-family:"Anek Telugu", sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(220, 218, 218, 0.187);
+  padding: 64px 0;
+}
+footer .section-container {
+  display: flex;
+}
+
+footer .col {
+  width: 25%;
+  
+}
+
+#footer_logo {
+  max-width: 108px;
+  margin: 0 0 16px 0;
+}
+
+footer .icon_link {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+footer .icon_link img {
+  width: 24px;
+}
+
+footer .col a {
+  color: black;
+  font-weight: normal;
+}
+
+footer h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+footer .col ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer .col ul li {
+  margin: 16px 0;
+}
+  footer .section-container {
+    flex-wrap: wrap;
+  }
 @media (min-width: 550px) {
   .title {
     font-size: 30px;
@@ -505,33 +798,9 @@ margin: 22px 0;
       font-size: 40px;
     }
 
-  .two-text {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
 
-  .two-text .text-left {
-    width: 50%;
-    padding-right: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-  .two-text .text-right {
-    width: 50%;
-    padding-left: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    box-sizing: border-box;
-  }
+
+
 
     .twocolumn .column-graphics {
       width: 50%;
@@ -541,51 +810,6 @@ margin: 22px 0;
       justify-content: center;
       padding-left: 16px;
       box-sizing: border-box;
-    }
-
-    .grid-section {
-      display: grid;
-      grid-template-areas:
-      "card slack slack"
-      "phone slack slack"
-      "phone dash dash"
-      ;
-      grid-gap: 32px;
-      padding: 32px 0;
-      
-    }
-    
-    #credit-card {
-    grid-area: card;
-    width: 100%;
-    box-shadow: 0px 2px 40px 
-    rgba(0, 0, 0, 0.361);
-    border-radius:20px ;
-    padding: 0;
-    }
-    
-    #slack-invoice {
-      grid-area: slack;
-      width: 100%;
-      box-shadow: 0px 2px 40px
-      rgba(0, 0, 0, 0.361);
-      border-radius:20px ;
-      padding: 0;
-    }
-    #phone {
-      grid-area: phone;
-      width: 100%;
-      padding: 0;
-    }
-    
-    #dash {
-      grid-area: dash;
-      width: 100%;
-      box-shadow: 0px 2px 40px
-      rgba(0, 0, 0, 0.361);
-      border-radius:20px ;
-      z-index: -1;
-      padding: 0;
     }
 
     .PseudoElements .container-cards {
@@ -604,6 +828,8 @@ margin: 22px 0;
       
     }
 
+    /* 4ta seccion */
+
     .swipe-section .card h3 {
       font-size: 22px;
     }
@@ -614,7 +840,15 @@ margin: 22px 0;
       box-sizing: border-box;
     }
 
+    /* 5ta seccion  */
 
+    .global-section .card h3 {
+      font-size: 22px;  
+    }
+    
+    .virtual_section .text-left {
+      height: 446px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -647,7 +881,13 @@ margin: 22px 0;
     width: 100%;
     height: 460px;
   }  
-  
+
+    /* 5ta seccion  */
+
+  .global-section::before {
+    top: -120px;
+  }
+
 }
 
 
@@ -686,27 +926,15 @@ margin: 22px 0;
     padding: 0 16px;
     overflow-x:hidden;
   }
-}
 
-
-@media only  screen and (max-width: 550px) {
-  .unified-platform {
-    padding: 16px 0;
-  }
-
-  .PseudoElements {
-    padding: 32px 0;
-  }
-  .PseudoElements::before {
-    height: 950px;
-  }
-
-  .swipe-section {
-    padding: 64px 0 16px 0;
-  }
-
-  .swipe-section .card-container .card .icon {
-    height: 35px;
+    .virtual_section .section-container {
+      padding: 0;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  .text-right  {
+    
+    overflow: hidden;
   }
 }
 
@@ -725,4 +953,131 @@ margin: 22px 0;
   margin: 16px 0;
  }
 
+ .waiting_section .two-text {
+  align-items: center;
+ }
+
+ .waiting_section .text-right {
+  flex-wrap: wrap;
 }
+ .waiting_section .text-right .card {
+  width: 100%;
+  margin: 16px 0;
+ }
+}
+  
+
+@media only  screen and (max-width: 550px) {
+  .unified-platform {
+    padding: 16px 0;
+  }
+
+  .PseudoElements {
+    padding: 32px 0;
+  }
+  .PseudoElements::before {
+    height: 920px;
+  }
+
+  /* 4ta seccion */
+
+  .swipe-section {
+    padding: 64px 0 16px 0;
+  }
+
+  .swipe-section .card-container .card .icon {
+    height: 35px;
+  }
+  /* 5ta seccion */
+
+  .global-section {
+    padding: 64px 0 0 0;}
+
+    .global-section .card-container {
+      margin: 16px 0;
+    }
+
+    .global-section .two-text .text-left {
+      width: 100%;
+    }
+
+    .global-section .two-text .text-right {
+      width: 100%;
+      padding: 0;
+    }
+
+    #globe {
+      opacity: 10%;
+    }
+
+    .global-section .card-container {
+      margin: 16px 0;
+    }
+
+    .global-section .card-container .card {
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    .virtual_section {
+      padding: 0;
+    }
+
+    .two-text {
+      flex-direction: column;
+    }
+
+    .two-text .text-left {
+      width: 100%;
+    }
+
+    .two-text .text-right {
+      width: 100%;
+      padding: 0;
+      margin-top: -35px;
+  }
+
+  .virtual_section .swipe_sessions {
+    margin: 32px 0;
+    width: 100%;
+  }
+
+  .virtual_section .swipe_sessions .card_top {
+    height: 40%;
+  }
+
+  #sessions_logo {
+    width: 300px;
+  }
+
+  .virtual_section .card_bottom .card-text {
+    width: 100%;
+  }
+  
+  .waiting_section {
+    padding: 16px 0;
+  }
+  
+  footer .section-container {
+    flex-wrap: wrap;
+  }
+  footer .col {
+    width: 50%;
+    margin: 16px 0;
+  }
+
+  #footer_logo {
+    width: 70px;
+  }
+  footer .icon_link img {
+    width: 18px;
+  }
+
+  footer .col a {
+    font-size: 12px;
+  }
+}
+
+
+
+
