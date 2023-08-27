@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Inconsolata:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@700&family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -239,7 +239,9 @@ h2 {
   margin-bottom: 16px;
 }
 
-
+.unified-platform p {
+  margin: 30px 0;
+}
 
 .text-left p {
   font-size: 18px;
@@ -666,6 +668,8 @@ footer {
 }
 footer .section-container {
   display: flex;
+  flex-wrap: wrap;
+  width: 90%;
 }
 
 footer .col {
@@ -690,11 +694,14 @@ footer .icon_link img {
 footer .col a {
   color: black;
   font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 footer h3 {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Anek Telugu', sans-serif;
+  
 }
 footer .col ul {
   list-style-type: none;
@@ -703,9 +710,7 @@ footer .col ul {
 footer .col ul li {
   margin: 16px 0;
 }
-  footer .section-container {
-    flex-wrap: wrap;
-  }
+
 @media (min-width: 550px) {
   .title {
     font-size: 30px;
